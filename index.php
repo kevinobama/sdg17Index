@@ -17,36 +17,51 @@
 </html>
 <?php
 $data = array();
-$dataLeft = array();
-$dataRight = array();
-$dataRightSort = array();
-$k=10;
-while ( $k<= 150) {
-    if($k % 7 ==0) 	$dataLeft[]= $k;
-    if($k % 9 ==0)  $dataRight[]= $k;
-    $k=$k+1;
+//$dataLeft = array();
+//$dataRight = array();
+//$dataRightSort = array();
+//$k=10;
+//while ( $k<= 150) {
+//    if($k % 7 ==0) 	$dataLeft[]= $k;
+//    if($k % 9 ==0)  $dataRight[]= $k;
+//    $k=$k+1;
+//}
+//
+//$halfCount=count($dataLeft)-8;
+//while ( $halfCount<= count($dataLeft)-1) {
+//    $data[]=$dataLeft[$halfCount];
+//    $halfCount++;
+//}
+//
+//$halfCount=0;
+//while ( $halfCount<= 9) {
+//    $dataRightSort[]=$dataRight[$halfCount];
+//    $halfCount++;
+//}
+//rsort($dataRightSort);
+//$halfCount=0;
+//while ( $halfCount<= 9) {
+//    $data[]=$dataRightSort[$halfCount];
+//    $halfCount++;
+//}
+$k=0;
+$halfCount=30;
+while ( $halfCount<= 250 && $k<8) {
+    $data[]=$halfCount;
+    $halfCount=$halfCount+16;
+    $k++;
 }
 
-$halfCount=count($dataLeft)-8;
-while ( $halfCount<= count($dataLeft)-1) {
-    $data[]=$dataLeft[$halfCount];
-    $halfCount++;
-}
-
-$halfCount=0;
-while ( $halfCount<= 9) {
-    $dataRightSort[]=$dataRight[$halfCount];
-    $halfCount++;
-}
-rsort($dataRightSort);
-$halfCount=0;
-while ( $halfCount<= 9) {
-    $data[]=$dataRightSort[$halfCount];
-    $halfCount++;
+$k=0;
+$halfCount=120;
+while ( $halfCount>= 1 && $k<10) {
+    $data[]=$halfCount;
+    $halfCount=$halfCount-10;
+    $k++;
 }
 
 $quantity = json_encode($data);
-//print_r($data);
+
 ?>
 <script language="JavaScript">
     var quantity  = <?= $quantity?>
