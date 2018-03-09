@@ -1,0 +1,11 @@
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+.center {
+    margin: auto;
+    width: 75%;
+    /** border: 1px dotted blue; **/
+    padding: 10px;
+}

@@ -1,0 +1,8 @@
+composer.lock
+.htpasswd
+/node_modules
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+
